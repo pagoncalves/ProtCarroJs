@@ -15,9 +15,6 @@ function desligar() {
 function acelerar() {
      var maisVel = 1;
     resVel.innerHTML = Number(maisVel.value) + 1;
-       
-              
-
 }
 
 
