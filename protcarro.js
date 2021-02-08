@@ -19,9 +19,17 @@ function chave() {
     }
 
 }
+
 function acelerar() {
     if (ligado == true && velocidade < 45){ 
-    velocidade = velocidade + 1
-    resVel.innerHTML = velocidade;
+    velocidade = velocidade + 1;
+    resVel.innerHTML = `${velocidade} m/s`;
+    }
+}
+
+function freiar(){
+    if (ligado == true && velocidade > 0){
+        velocidade = velocidade - 1;
+        resVel.innerHTML = `${velocidade} m/s`;
     }
 }
