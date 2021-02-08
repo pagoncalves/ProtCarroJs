@@ -2,12 +2,15 @@ var btlig = window.document.getElementById('ligar')
 //var velocidade = window.document.getElementById('vel')	
 var resVel = window.document.getElementById('vel')
 var ligado = false;
+var velocidade = Number(0);
 
 
 function chave() {
     if (ligado == true) {
         btlig.style.backgroundColor = 'red'
         btlig.innerText = "Off"
+        velocidade = 0;
+        resVel.innerHTML = 0;
         ligado = false
     } else {
         btlig.style.backgroundColor = 'green'
@@ -17,7 +20,8 @@ function chave() {
 
 }
 function acelerar() {
-
-    var maisVel = 1;
-    resVel.innerHTML = Number(maisVel.value) + 1;
+    if (ligado == true && velocidade < 45){ 
+    velocidade = velocidade + 1
+    resVel.innerHTML = velocidade;
+    }
 }
