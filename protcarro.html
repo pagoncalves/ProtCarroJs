@@ -10,20 +10,21 @@
 
 <body>
     <div>
-        <img src="Volante.png" alt="Imagem Volante">
+        <img src="V_0.png" alt="Imagem Volante" id="imgVol">
     </div>
 
     <div>
-        <button onclick="chave()"  id="ligar" style="background-color: rgb(214, 8, 8);">Off</button><!--Arrumar double click-->
+        <button onclick="chave()"  id="ligar">Off</button><!--Arrumar double click-->
         <button onclick="acelerar()">Acelerador</button> <!--botao acelerar-->
         <button onclick="freiar()">Freio</button>
-        <button>Esquerda</button>
-        <button>Direita</button>
+        <button onclick="esquerda()" id="esquerda">Esquerda</button>
+        <button onclick="direita()">Direita</button>
     </div>
 
    <div id="vel">Velocimetro </div>
         
-        <section>Odometro</section>
+        <section id="odo">Odometro</section>
+       
    
 
 <script src="protcarro.js"></script>
