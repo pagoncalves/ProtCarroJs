@@ -5,8 +5,11 @@ var ligado = false;
 var velocidade = Number(0);
 var direcao = Number(0);
 var imagem = window.document.getElementById('imgVol')
-var atua = window.document.getElementById('odo')
+var atua = window.document.getElementById("odo")
+var m = Number(0)
 
+
+var m = Number(1);
 
 function chave() {
     if (ligado == true) {
@@ -16,10 +19,15 @@ function chave() {
         resVel.innerHTML = 0;
         ligado = false;
         direcao = 0;
+        imagem.src = "V_0.png" 
+        atua.innerHTML = 0;
+        
+
     } else {
         btlig.style.backgroundColor = 'green'
         btlig.innerText = "On"
         ligado = true
+        
 
     }
 
@@ -29,10 +37,13 @@ function acelerar() {
     if (ligado == true && velocidade < 45) {
         velocidade = velocidade + 1;
         resVel.innerHTML = `${velocidade} m/s`;
+        m = (m + (velocidade * 1))/100 ;
+        atua.innerHTML =  ` ${m.toFixed(2)}m/s` ;
+        
     }
 }
 
-function freiar() {
+function frear() {
     if (ligado == true && velocidade > 0) {
         velocidade = velocidade - 1;
         resVel.innerHTML = `${velocidade} m/s`;
@@ -147,4 +158,8 @@ function direita() {
             imagem.src = "V_90d.png";
                   }
     }
+}
+
+function desenhacarro(){
+    
 }
